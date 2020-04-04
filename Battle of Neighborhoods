@@ -1,0 +1,129 @@
+Battle of Neighborhoods (Week 1 & Week 2)
+ 1. Description of the Problem and Discussion of the Background
+
+
+
+The main idea is compare the neighborhoods from Bilbao to explore the city's businesses
+
+
+2. Initial Data Preparation (Week 1)
+
+1.	Loading Bilbao Open Data about neighborhoods
+
+The Wikipedia page of Bilbao contains a table from the neighborhoods from the city, but in order to get data info, the Bilbao Open Data website is a portal where the city council of Bilbao upload free public data in order to facilitate the development of businesses.
+
+
+
+
+
+
+
+2.	Tidy data and splitting info
+3.	Get the coordinates of the neighborhoods
+
+
+
+
+
+
+
+
+
+
+
+
+
+Some coordinates returned by Geopy are wrong and it’s because the name of the districts are different. I found the right ones in Google and replaced it with Pandas.
+
+4.	Check information
+ 3. Exploratory Data Analysis. (Week 2)
+
+1.	Map of Bilbao’s Neighboorhods
+
+I have used Folium library to plot a map where to display all the Bilbao neighborhoods.
+
+
+
+4.Getting Ready to Use FourSquare API
+
+1.	Considering the best Bilbao venues
+
+Using Foursquare API credentials, i have managed to get the top 100 venues  that are in Bilbao within a radius of 3000 meters.
+
+
+
+
+
+
+
+
+
+
+
+
+
+5.	One Hot Encoding
+
+I proceed to create a dataframe with pandas hot encoding fo the venue categories…
+
+
+
+… and grouped by Bilbao’s top ten most common Venues
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6.	K-means
+
+To get better information about these locations, i’ve used clustering (K-means) setting as 5 the number of clusters. 
+
+
+
+
+
+
+
+
+
+7.	Explore the final clusters
+
+Finally, here’s a map using Folium library that represent these 5 clusters
+
+
+
+8.	Results
+
+The results of the exploratory data analysis and clustering are summarized below:
+
+-	Except Cluster 3 (Basurtu) and Cluster 4 (Abando) , the most common venue is bar, and this is not a surprise due that Bilbao is famous for its high concentration of outstanding restaurants, alongside its renowned pintxos bars.
+
+-	The average 2st most common venue are banks and this is also an evidence due that the GDP in the Basque Country is 24,1 % above the spanish average.
+
+-	Cluster 4 (Abando) is the commercial district full of clothing stores
+
+
+
+
+
+
+
+-	The 10th most common venue in Cluster 3 (Basurtu), Cluster 4 (Abando) and Cluster 5 (Uribarri) are Café’s and this is reamarkable due that are clusters almost in the city centre. Fort he next capstone, should be interesting the idea of establish a Café in one of these districts.
+
+9.	Conclusion
+
+Finally to close this project, i need to express how much i’ve learned of how real life data-science projects look like. I really learnt things along all these months of hard work that i’d never have imagined; use Python libraries, Folium for maps, Foursquare API for explore venues…and quite a lot more. I’d for sure continue learning data science because this is not the future, is the present for all of us.
+
+
